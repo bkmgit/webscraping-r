@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Lesson Title: All in One View</title>
+<title>Webscrapping with R and rvest: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../assets/styles.css">
 <script src="../assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -65,7 +65,7 @@
       <img class="small-logo" alt="Carpentries Incubator" src="../assets/images/incubator-logo-sm.svg">
 </div>
     <div class="lesson-title-md">
-      Lesson Title
+      Webscrapping with R and rvest
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -76,7 +76,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Lesson Title
+            Webscrapping with R and rvest
           </span>
         </li>
         <li class="nav-item">
@@ -106,7 +106,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Lesson Title
+  Webscrapping with R and rvest
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -165,7 +165,7 @@
                   <div class="accordion accordion-flush" id="accordionFlush1">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading1">
-        <a href="index.html">Summary and Schedule</a>
+        <a href="index.html">Web scraping with R and rvest</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -177,7 +177,67 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using RMarkdown</a>
+        <a href="00-before-we-start.html">1. Using RMarkdown</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="01-intro.html">2. Introduction: What is web scraping?</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="02-html.html">3. Using RMarkdown</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="03-scraping.html">4. Using RMarkdown</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="04-plotting.html">5. Using RMarkdown</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="05-conclusion.html">6. Conclusion</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -239,11 +299,643 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using RMarkdown</a></p>
+<section id="aio-00-before-we-start"><p>Content from <a href="00-before-we-start.html">Using RMarkdown</a></p>
 <hr>
-<p> Last updated on 2023-05-02 | 
+<p> Last updated on 2023-06-10 | 
         
-        <a href="https://github.com/carpentries/workbench-template-rmd/edit/main/episodes/introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/bkmgit/webscraping-r/edit/main/episodes/00-before-we-start.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do you write a lesson using R Markdown and
+<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain how to use markdown with the new lesson template</li>
+<li>Demonstrate how to include pieces of code, figures, and nested
+challenge blocks</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>This is a lesson created via The Carpentries Workbench. It is written
+in <a href="https://pandoc.org/MANUAL.txt" class="external-link">Pandoc-flavored Markdown</a>
+for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
+Markdown</a> for dynamic files that can render code into output. Please
+refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
+Carpentries Workbench</a> for full documentation.</p>
+<p>What you need to know is that there are three sections required for a
+valid Carpentries lesson template:</p>
+<ol style="list-style-type: decimal">
+<li>
+<code>questions</code> are displayed at the beginning of the episode
+to prime the learner for the content.</li>
+<li>
+<code>objectives</code> are the learning objectives for an episode
+displayed with the questions.</li>
+<li>
+<code>keypoints</code> are displayed at the end of the episode to
+reinforce the objectives.</li>
+</ol>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Instructor Note
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Inline instructor notes can help inform instructors of timing
+challenges associated with the lessons. They appear in the “Instructor
+View”</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Can you do it?<a class="anchor" aria-label="anchor" href="#challenge-1-can-you-do-it"></a>
+</h3>
+<div class="callout-content">
+<p>What is the output of this command?</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
+<h3 class="callout-title">Challenge 2: how do you nest solutions within
+challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do-you-nest-solutions-within-challenge-blocks"></a>
+</h3>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Show me the solution
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>You can add a line with at least three colons and a
+<code>solution</code> tag.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="figures"><h2 class="section-heading">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+</h2>
+<hr class="half-width">
+<p>You can also include figures generated from R Markdown:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">pie</span><span class="op">(</span></span>
+<span>  <span class="fu">c</span><span class="op">(</span>Sky <span class="op">=</span> <span class="fl">78</span>, <span class="st">"Sunny side of pyramid"</span> <span class="op">=</span> <span class="fl">17</span>, <span class="st">"Shady side of pyramid"</span> <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, </span>
+<span>  init.angle <span class="op">=</span> <span class="fl">315</span>, </span>
+<span>  col <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"deepskyblue"</span>, <span class="st">"yellow"</span>, <span class="st">"yellow3"</span><span class="op">)</span>, </span>
+<span>  border <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre>
+</div>
+<figure style="text-align: center"><img src="../fig/00-before-we-start-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid" class="figure mx-auto d-block"><figcaption>
+Sun arise each and every morning
+</figcaption></figure><p>Or you can use standard markdown for static figures with the
+following syntax:</p>
+<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
+<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><figcaption>You belong in The Carpentries!</figcaption></figure></section><section id="math"><h2 class="section-heading">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+</h2>
+<hr class="half-width">
+<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
+create dynamic reports with {knitr}, so we now use mathjax to describe
+this:</p>
+<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
+<p>Cool, right?</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>Use <code>.md</code> files for episodes when you want static
+content</li>
+<li>Use <code>.Rmd</code> files for episodes when you need to generate
+output</li>
+<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
+with your lesson</li>
+<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
+locally</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="aio-01-intro"><p>Content from <a href="01-intro.html">Introduction: What is web scraping?</a></p>
+<hr>
+<p> Last updated on 2023-06-10 | 
+        
+        <a href="https://github.com/bkmgit/webscraping-r/edit/main/episodes/01-intro.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 10 minutes </p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What is web scraping and why is it useful?</li>
+<li>What are typical use cases for web scraping?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Introduce the concept of structured data</li>
+<li>Discuss how data can be extracted from web pages</li>
+<li>Introduce the examples that will be used in this lesson</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="what-is-web-scraping"><h2 class="section-heading">What is web scraping?<a class="anchor" aria-label="anchor" href="#what-is-web-scraping"></a>
+</h2>
+<hr class="half-width">
+<p>Web scraping is a technique for extracting information from websites.
+This can be done manually but it is usually faster, more efficient and
+less error-prone to automate the task.</p>
+<p>Web scraping allows you to acquire non-tabular or poorly structured
+data from websites and convert it into a usable, structured format, such
+as a .csv file or spreadsheet.</p>
+<p>Scraping is about more than just acquiring data: it can also help you
+archive data and track changes to data online.</p>
+<p>It is closely related to the practice of web <em>indexing</em>, which
+is what search engines like Google do when mass-analysing the Web to
+build their indices. But contrary to <em>web indexing</em>, which
+typically parses the entire content of a web page to make it searchable,
+<em>web scraping</em> targets specific information on the pages
+visited.</p>
+<p>For example, online stores will often scour the publicly available
+pages of their competitors, scrape item prices, and then use this
+information to adjust their own prices. Another common practice is
+“contact scraping” in which personal information like email addresses or
+phone numbers is collected for marketing purposes.</p>
+<p>Web scraping is also increasingly being used by scholars to create
+data sets for text mining projects; these might be collections of
+journal articles or digitised texts. The practice of <a href="https://en.wikipedia.org/wiki/Data_journalism" class="external-link">data
+journalism</a>, in particular, relies on the ability of investigative
+journalists to harvest data that is not always presented or published in
+a form that allows analysis.</p>
+</section><section id="before-you-get-started"><h2 class="section-heading">Before you get started<a class="anchor" aria-label="anchor" href="#before-you-get-started"></a>
+</h2>
+<hr class="half-width">
+<p>As useful as scraping is, there might be better options for the task.
+Choose the right (i.e. the easiest) tool for the job.</p>
+<ul>
+<li>Check whether or you can easily copy and paste data from a site into
+spreadsheet software. This might be quicker than scraping.</li>
+<li>Check if the site or service already provides an API to extract
+structured data. If it does, that will be a much more efficient and
+effective pathway. Good examples are the <a href="https://docs.github.com/en/rest/overview/about-githubs-apis?apiVersion=2022-11-28" class="external-link">GitHub
+API</a>, the <a href="https://docs.joinmastodon.org/client/intro/" class="external-link">Mastodon APIs</a> or
+the <a href="https://developers.google.com/youtube/v3/docs/commentThreads/list" class="external-link">YouTube
+comments API</a>.</li>
+<li>For much larger needs, Freedom of information requests can be
+useful. Be specific about the formats required for the data you
+want.</li>
+</ul></section><section id="example-scraping-government-websites-for-contact-addresses"><h2 class="section-heading">Example: scraping government websites for contact addresses<a class="anchor" aria-label="anchor" href="#example-scraping-government-websites-for-contact-addresses"></a>
+</h2>
+<hr class="half-width">
+<p>In this lesson, we will extract contact information from government
+websites that list the members of various jurisdictions.</p>
+<p>Let’s start by looking at the current list of members of the South
+African parliament, which is available on the <a href="https://www.parliament.gov.za/group-details" class="external-link">South African
+parliament website</a>.</p>
+<p>This is how this page appears in June 2023:</p>
+<p><img src=".././fig/saparl.png" alt="Screenshot of the South African Parliament website" class="figure">{alt=<code>Image showing top part of the South African parliament webite https://www.parliament.gov.za/group-details</code>}</p>
+<p>There are several features (circled in the image above) that make the
+data on this page easier to work with. The search, reorder, refine
+features and display modes hint that the data is actually stored in a
+(structured) database before being displayed on this page. The data can
+be readily downloaded either as a comma separated values (.csv) file or
+as XML for re-use in their own database, spreadsheet or computer
+program.</p>
+<p>Even though the information displayed in the view above is not
+labelled, anyone visiting this site with some knowledge of South Africa
+geography and politics can see what information pertains to the
+politicians’ names, the geographical area they come from and the
+political party they represent. This is because human beings are good at
+using context and prior knowledge to quickly categorise information.</p>
+<p>Computers, on the other hand, cannot do this unless we provide them
+with more information. Fortunately, if we examine the source HTML code
+of this page, we can see that the information displayed has some
+structure:</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>&lt;div class="cell" id="all-members-tabs-wrapper"&gt;
+      &lt;group-details members='{&amp;quot;a-d&amp;quot;:[{&amp;quot;id&amp;quot;:1,&amp;quot;full_name&amp;quot;:&amp;quot;Phoebe Noxolo Abraham&amp;quot;,&amp;quot;profile_pic_url&amp;quot;:&amp;quot;\/storage\/app\/media\/MemberImages\/1.jpg&amp;quot;,&amp;quot;party&amp;quot;:&amp;quot;ANC&amp;quot;,&amp;quot;province&amp;quot;:&amp;quot;Eastern Cape&amp;quot;,&amp;quot;national&amp;quot;:0},{&amp;quot;id&amp;quot;:2,&amp;quot;full_name&amp;quot;:&amp;quot;Alexandra Lilian Amelia Abrahams&amp;quot;,&amp;quot;profile_pic_url&amp;quot;:&amp;quot;\/storage\/app\/media\/MemberImages\/2.jpg&amp;quot;,&amp;quot;party&amp;quot;:&amp;quot;DA&amp;quot;,&amp;quot;province&amp;quot;:&amp;quot;Western Cape&amp;quot;,&amp;quot;national&amp;quot;:0},{&amp;quot;id&amp;quot;:3,&amp;quot;full_name&amp;quot;:&amp;quot;Rachel Cecilia Adams&amp;quot;,&amp;quot;profile_pic_url&amp;quot;:&amp;quot; ...member-count='450'&gt;&lt;/group-details&gt;
+&lt;/div&gt;
+      
+(...)      </code></pre>
+</div>
+<p>Thanks to this structure, we could relatively easily instruct a
+computer to look for all parliamentarians from the Northern Cape and
+list their names and parties.</p>
+<div id="structured-vs-unstructured-data" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="structured-vs-unstructured-data" class="callout-inner">
+<h3 class="callout-title">Structured vs unstructured data<a class="anchor" aria-label="anchor" href="#structured-vs-unstructured-data"></a>
+</h3>
+<div class="callout-content">
+<p>When presented with information, human beings are good at quickly
+categorizing it and extracting the data that they are interested in. For
+example, when we look at a magazine rack, provided the titles are
+written in a script that we are able to read, we can rapidly figure out
+the titles of the magazines, the stories they contain, the language they
+are written in, etc. and we can probably also easily organize them by
+topic, recognize those that are aimed at children, or even whether they
+lean toward a particular end of the political spectrum. Computers have a
+much harder time making sense of such <em>unstructured</em> data unless
+we specifically tell them what elements data is made of, for example by
+adding labels such as <em>this is the title of this magazine</em> or
+<em>this is a magazine about food</em>. Data in which individual
+elements are separated and labelled is said to be
+<em>structured</em>.</p>
+</div>
+</div>
+</div>
+<p>Let’s look now at the current list of members for the <a href="https://www25.senado.leg.br/web/senadores/em-exercicio" class="external-link">Brazilian
+Senate</a>.</p>
+<p><img src=".././fig/brazilsenate.png" alt="Screenshot of the Brazilian Senate members website" class="figure">{alt=<code>Image of the top of the Brazilian Senate members website https://www.parliament.gov.za/group-details with  options to download data as a CSV file and options for sorting based on gender, party, caucus and region circled</code>}</p>
+<p>This page also displays a list of names, political and geographical
+affiliation. Here is part of the code for this page:</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>   &lt;div class="sf-large-table-container"&gt;
+        &lt;table id="senadoresemexercicio-tabela-senadores"
+               class="table table-condensed"
+               title="Lista de senadores em exercício"&gt;
+            &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Nome&lt;/th&gt;
+                &lt;th&gt;Partido&lt;/th&gt;
+                &lt;th&gt;UF&lt;/th&gt;
+                &lt;th&gt;Período&lt;/th&gt;
+                
+                &lt;th&gt;Telefones&lt;/th&gt;
+                
+                &lt;th&gt;Correio Eletrônico&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+            
+            
+                
+                    &lt;tr class="search-group-row"&gt;
+                        &lt;td colspan="6"&gt;
+                            &lt;a href="#"
+                               name="AC"&gt;&lt;/a&gt;
+                            
+                            &lt;strong&gt;AC - Acre&lt;/strong&gt;
+                            
+                                &amp;nbsp;
+                                &lt;img
+                                        src="https://www.senado.leg.br/senadores/img/bandeiras/AC_p.gif"
+                                        alt="Bandeira de AC - Acre"/&gt; &lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td class="nowrap"&gt;&lt;a href="https://www25.senado.leg.br/web/senadores/senador/-/perfil/5672"&gt;Alan Rick&lt;/a&gt;&lt;/td&gt; &lt;td&gt;UNIÃO&lt;/td&gt; &lt;td&gt;AC&lt;/td&gt; &lt;td&gt;2023 - 2031&lt;/td&gt; &lt;td class="break-word"&gt;(61) 3303-6333&lt;/td&gt; &lt;td&gt;sen.alanrick@senado.leg.br&lt;/td&gt; &lt;/tr&gt;&lt;tr&gt; &lt;td class="nowrap"&gt;&lt;a href="https://www25.senado.leg.br/web/senadores/senador/-/perfil/285"&gt;Marcio Bittar&lt;/a&gt;&lt;/td&gt; &lt;td&gt;UNIÃO&lt;/td&gt; &lt;td&gt;AC&lt;/td&gt; &lt;td&gt;2019 - 2027&lt;/td&gt;(...)</code></pre>
+</div>
+<p>There are several features (circled in the image above) that make the
+data on this page easy to work with. The search, reorder features and
+display modes hint that the data is actually stored in a (structured)
+database before being displayed on this page. The data can be readily
+downloaded either as a comma separated values (.csv) file for re-use in
+their own database, spreadsheet or computer program or as a pdf for
+offline reading.</p>
+<p>What if we wanted to download the South African parliament members
+dataset and, for example, compare it with the Brazilian senate dataset
+to analyze gender representation, or the representation of political
+forces in the two groups? We could try copy-pasting the entire table
+into a spreadsheet or even manually copy-pasting the names and parties
+in another document, but this can quickly become impractical when faced
+with a large set of data. What if we wanted to collect this information
+for every country that has a national legislature?</p>
+<p>Fortunately, there are tools to automate at least part of the
+process. This technique is called <em>web scraping</em>.</p>
+<div id="callout2" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout2"></a>
+</h3>
+<div class="callout-content">
+<p>“Web scraping (web harvesting or web data extraction) is a computer
+software technique of extracting information from websites.” (Source: <a href="https://en.wikipedia.org/wiki/Web_scraping" class="external-link">Wikipedia</a>)</p>
+</div>
+</div>
+</div>
+<p>Web scraping typically targets one web site at a time to extract
+unstructured information and put it in a structured form for reuse.</p>
+<p>In this lesson, we will continue exploring the examples above and try
+different techniques to extract the information they contain. But before
+we launch into web scraping proper, we need to look a bit closer at how
+information is organized within an HTML document and how to build
+queries to access a specific subset of that information.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>Humans are good at categorizing information, computers not so
+much.</li>
+<li>Often, data on a web site is not properly structured, making its
+extraction difficult.</li>
+<li>Web scraping is the process of automating the extraction of data
+from web sites.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="aio-02-html"><p>Content from <a href="02-html.html">Using RMarkdown</a></p>
+<hr>
+<p> Last updated on 2023-06-10 | 
+        
+        <a href="https://github.com/bkmgit/webscraping-r/edit/main/episodes/02-html.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do you write a lesson using R Markdown and
+<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain how to use markdown with the new lesson template</li>
+<li>Demonstrate how to include pieces of code, figures, and nested
+challenge blocks</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>This is a lesson created via The Carpentries Workbench. It is written
+in <a href="https://pandoc.org/MANUAL.txt" class="external-link">Pandoc-flavored Markdown</a>
+for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
+Markdown</a> for dynamic files that can render code into output. Please
+refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
+Carpentries Workbench</a> for full documentation.</p>
+<p>What you need to know is that there are three sections required for a
+valid Carpentries lesson template:</p>
+<ol style="list-style-type: decimal">
+<li>
+<code>questions</code> are displayed at the beginning of the episode
+to prime the learner for the content.</li>
+<li>
+<code>objectives</code> are the learning objectives for an episode
+displayed with the questions.</li>
+<li>
+<code>keypoints</code> are displayed at the end of the episode to
+reinforce the objectives.</li>
+</ol>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Instructor Note
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Inline instructor notes can help inform instructors of timing
+challenges associated with the lessons. They appear in the “Instructor
+View”</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Can you do it?<a class="anchor" aria-label="anchor" href="#challenge-1-can-you-do-it"></a>
+</h3>
+<div class="callout-content">
+<p>What is the output of this command?</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
+<h3 class="callout-title">Challenge 2: how do you nest solutions within
+challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do-you-nest-solutions-within-challenge-blocks"></a>
+</h3>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Show me the solution
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>You can add a line with at least three colons and a
+<code>solution</code> tag.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="figures"><h2 class="section-heading">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+</h2>
+<hr class="half-width">
+<p>You can also include figures generated from R Markdown:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">pie</span><span class="op">(</span></span>
+<span>  <span class="fu">c</span><span class="op">(</span>Sky <span class="op">=</span> <span class="fl">78</span>, <span class="st">"Sunny side of pyramid"</span> <span class="op">=</span> <span class="fl">17</span>, <span class="st">"Shady side of pyramid"</span> <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, </span>
+<span>  init.angle <span class="op">=</span> <span class="fl">315</span>, </span>
+<span>  col <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"deepskyblue"</span>, <span class="st">"yellow"</span>, <span class="st">"yellow3"</span><span class="op">)</span>, </span>
+<span>  border <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre>
+</div>
+<figure style="text-align: center"><img src="../fig/02-html-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid" class="figure mx-auto d-block"><figcaption>
+Sun arise each and every morning
+</figcaption></figure><p>Or you can use standard markdown for static figures with the
+following syntax:</p>
+<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
+<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><figcaption>You belong in The Carpentries!</figcaption></figure></section><section id="math"><h2 class="section-heading">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+</h2>
+<hr class="half-width">
+<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
+create dynamic reports with {knitr}, so we now use mathjax to describe
+this:</p>
+<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
+<p>Cool, right?</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>Use <code>.md</code> files for episodes when you want static
+content</li>
+<li>Use <code>.Rmd</code> files for episodes when you need to generate
+output</li>
+<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
+with your lesson</li>
+<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
+locally</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="aio-03-scraping"><p>Content from <a href="03-scraping.html">Using RMarkdown</a></p>
+<hr>
+<p> Last updated on 2023-06-10 | 
+        
+        <a href="https://github.com/bkmgit/webscraping-r/edit/main/episodes/03-scraping.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -394,7 +1086,7 @@ challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do
 <span>  border <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span></code></pre>
 </div>
-<figure style="text-align: center"><img src="../fig/introduction-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid" class="figure mx-auto d-block"><figcaption>
+<figure style="text-align: center"><img src="../fig/03-scraping-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid" class="figure mx-auto d-block"><figcaption>
 Sun arise each and every morning
 </figcaption></figure><p>Or you can use standard markdown for static figures with the
 following syntax:</p>
@@ -432,7 +1124,486 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</section></section>
+</section></section><section id="aio-04-plotting"><p>Content from <a href="04-plotting.html">Using RMarkdown</a></p>
+<hr>
+<p> Last updated on 2023-06-10 | 
+        
+        <a href="https://github.com/bkmgit/webscraping-r/edit/main/episodes/04-plotting.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do you write a lesson using R Markdown and
+<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain how to use markdown with the new lesson template</li>
+<li>Demonstrate how to include pieces of code, figures, and nested
+challenge blocks</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>This is a lesson created via The Carpentries Workbench. It is written
+in <a href="https://pandoc.org/MANUAL.txt" class="external-link">Pandoc-flavored Markdown</a>
+for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
+Markdown</a> for dynamic files that can render code into output. Please
+refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
+Carpentries Workbench</a> for full documentation.</p>
+<p>What you need to know is that there are three sections required for a
+valid Carpentries lesson template:</p>
+<ol style="list-style-type: decimal">
+<li>
+<code>questions</code> are displayed at the beginning of the episode
+to prime the learner for the content.</li>
+<li>
+<code>objectives</code> are the learning objectives for an episode
+displayed with the questions.</li>
+<li>
+<code>keypoints</code> are displayed at the end of the episode to
+reinforce the objectives.</li>
+</ol>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Instructor Note
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Inline instructor notes can help inform instructors of timing
+challenges associated with the lessons. They appear in the “Instructor
+View”</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Can you do it?<a class="anchor" aria-label="anchor" href="#challenge-1-can-you-do-it"></a>
+</h3>
+<div class="callout-content">
+<p>What is the output of this command?</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
+<h3 class="callout-title">Challenge 2: how do you nest solutions within
+challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do-you-nest-solutions-within-challenge-blocks"></a>
+</h3>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Show me the solution
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>You can add a line with at least three colons and a
+<code>solution</code> tag.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="figures"><h2 class="section-heading">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+</h2>
+<hr class="half-width">
+<p>You can also include figures generated from R Markdown:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">pie</span><span class="op">(</span></span>
+<span>  <span class="fu">c</span><span class="op">(</span>Sky <span class="op">=</span> <span class="fl">78</span>, <span class="st">"Sunny side of pyramid"</span> <span class="op">=</span> <span class="fl">17</span>, <span class="st">"Shady side of pyramid"</span> <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, </span>
+<span>  init.angle <span class="op">=</span> <span class="fl">315</span>, </span>
+<span>  col <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"deepskyblue"</span>, <span class="st">"yellow"</span>, <span class="st">"yellow3"</span><span class="op">)</span>, </span>
+<span>  border <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre>
+</div>
+<figure style="text-align: center"><img src="../fig/04-plotting-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid" class="figure mx-auto d-block"><figcaption>
+Sun arise each and every morning
+</figcaption></figure><p>Or you can use standard markdown for static figures with the
+following syntax:</p>
+<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
+<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><figcaption>You belong in The Carpentries!</figcaption></figure></section><section id="math"><h2 class="section-heading">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+</h2>
+<hr class="half-width">
+<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
+create dynamic reports with {knitr}, so we now use mathjax to describe
+this:</p>
+<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
+<p>Cool, right?</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>Use <code>.md</code> files for episodes when you want static
+content</li>
+<li>Use <code>.Rmd</code> files for episodes when you need to generate
+output</li>
+<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
+with your lesson</li>
+<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
+locally</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="aio-05-conclusion"><p>Content from <a href="05-conclusion.html">Conclusion</a></p>
+<hr>
+<p> Last updated on 2023-06-10 | 
+        
+        <a href="https://github.com/bkmgit/webscraping-r/edit/main/episodes/05-conclusion.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 15 minutes </p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>When is web scraping OK and when is it not?</li>
+<li>Is web scraping legal? Can I get into trouble?</li>
+<li>How can I make sure I’m doing the right thing?</li>
+<li>What can I do with the data that I’ve scraped?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Wrap things up</li>
+<li>Discuss the legal implications of web scraping</li>
+<li>Establish a code of conduct</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Now that we have seen one way to scrape data from websites and are
+ready to start working on potentially larger projects, we may ask
+ourselves whether there are any legal implications of writing a piece of
+computer code that downloads information from the Internet.</p>
+<p>In this section, we will be discussing some of the issues to be aware
+of when scraping websites, and we will establish a <a href="#web-scraping-code-of-conduct">code of conduct (below)</a> to
+guide our web scraping projects.</p>
+<div id="this-section-does-not-constitute-legal-advice" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="this-section-does-not-constitute-legal-advice" class="callout-inner">
+<h3 class="callout-title">This section does not constitute legal
+advice<a class="anchor" aria-label="anchor" href="#this-section-does-not-constitute-legal-advice"></a>
+</h3>
+<div class="callout-content">
+<p>Please note that the information provided on this page is for
+information purposes only and does not constitute professional legal
+advice on the practice of web scraping.</p>
+<p>If you are concerned about the legal implications of using web
+scraping on a project you are working on, it is probably a good idea to
+seek advice from a professional, preferably someone who has knowledge of
+the intellectual property (copyright) legislation in effect in your
+country.</p>
+</div>
+</div>
+</div>
+<section id="dont-break-the-web-denial-of-service-attacks"><h2 class="section-heading">Don’t break the web: Denial of Service attacks<a class="anchor" aria-label="anchor" href="#dont-break-the-web-denial-of-service-attacks"></a>
+</h2>
+<hr class="half-width">
+<p>The first and most important thing to be careful about when writing a
+web scraper is that it typically involves querying a website repeatedly
+and accessing a potentially large number of pages. For each of these
+pages, a request will be sent to the web server that is hosting the
+site, and the server will have to process the request and send a
+response back to the computer that is running our code. Each of these
+requests will consume resources on the server, during which it will not
+be doing something else, like for example responding to someone else
+trying to access the same site.</p>
+<p>If we send too many such requests over a short span of time, we can
+prevent other “normal” users from accessing the site during that time,
+or even cause the server to run out of resources and crash.</p>
+<p>In fact, this is such an efficient way to disrupt a web site that
+hackers are often doing it on purpose. This is called a <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack" class="external-link">Denial of
+Service (DoS) attack</a>.</p>
+<p>Since DoS attacks are unfortunately a common occurence on the
+Internet, modern web servers include measures to ward off such
+illegitimate use of their resources. They are watchful for large amounts
+of requests appearing to come from a single computer or IP address, and
+their first line of defense often involves refusing any further requests
+coming from this IP address.</p>
+<p>A web scraper, even one with legitimate purposes and no intent to
+bring a website down, can exhibit similar behaviour and, if we are not
+careful, result in our computer being banned from accessing a
+website.</p>
+<p>The good news is that a good web scraper, such as rvest, recognizes
+that this is a risk and includes measures to prevent our code from
+appearing to launch a DoS attack on a website. This is mostly done by
+inserting a random delay between individual requests, which gives the
+target server enough time to handle requests from other users between
+ours.</p>
+<p>This is rvest’s default behaviour, and it should prevent most
+scraping projects from ever causing problems. To be on the safe side,
+however, it is good practice to limit the number of pages we are
+scraping while we are still writing and debugging our code. This is why
+in the previous section, we imposed a limit of five pages to be scraped,
+which we only removed when we were reasonably certain the scraper was
+working as it should.</p>
+<p>Thanks to the defenses web servers use to protect themselves against
+DoS attacks and Scrapy’s measure to avoid inadvertently launching such
+an attack, the risks of causing trouble is limited.</p>
+</section><section id="dont-steal-copyright-and-fair-use"><h2 class="section-heading">Don’t steal: Copyright and fair use<a class="anchor" aria-label="anchor" href="#dont-steal-copyright-and-fair-use"></a>
+</h2>
+<hr class="half-width">
+<p>It is important to recognize that in certain circumstances web
+scraping <em>can</em> be illegal. If the terms and conditions of the web
+site we are scraping specifically prohibit downloading and copying its
+content, then we could be in trouble for scraping it.</p>
+<p>In practice, however, web scraping is a tolerated practice, provided
+reasonable care is taken not to disrupt the “regular” use of a web site,
+as we have seen above.</p>
+<p>In a sense, web scraping is no different than using a web browser to
+visit a web page, in that it amounts to using computer software (a
+browser vs a scraper) to acccess data that is publicly available on the
+web.</p>
+<p>In general, if data is publicly available (the content that is being
+scraped is not behind a password-protected authentication system), then
+it is OK to scrape it, provided we don’t break the web site doing so.
+What is potentially problematic is if the scraped data will be shared
+further. For example, downloading content off one website and posting it
+on another website (as our own), unless explicitely permitted, would
+constitute copyright violation and be illegal.</p>
+<p>However, most copyright legislations recognize cases in which reusing
+some, possibly copyrighted, information in an aggregate or derivative
+format is considered “fair use”. In general, unless the intent is to
+pass off data as our own, copy it word for word or trying to make money
+out of it, reusing publicly available content scraped off the internet
+is OK.</p>
+<div class="section level3">
+<h3 id="better-be-safe-than-sorry">Better be safe than sorry<a class="anchor" aria-label="anchor" href="#better-be-safe-than-sorry"></a>
+</h3>
+<p>Be aware that copyright and data privacy legislation typically
+differs from country to country. Be sure to check the laws that apply in
+your context. For example, in Australia, it can be illegal to scrape and
+store personal information such as names, phone numbers and email
+addresses, even if they are publicly available.</p>
+<p>If you are looking to scrape data for your own personal use, then the
+above guidelines should probably be all that you need to worry about.
+However, if you plan to start harvesting a large amount of data for
+research or commercial purposes, you should probably seek legal advice
+first.</p>
+<p>If you work in a university, chances are it has a copyright office
+that will help you sort out the legal aspects of your project. The
+university library is often the best place to start looking for help on
+copyright.</p>
+</div>
+</section><section id="be-nice-ask-and-share"><h2 class="section-heading">Be nice: ask and share<a class="anchor" aria-label="anchor" href="#be-nice-ask-and-share"></a>
+</h2>
+<hr class="half-width">
+<p>Depending on the scope of your project, it might be worthwhile to
+consider asking the owners or curators of the data you are planning to
+scrape if they have it already available in a structured format that
+could suit your project. If your aim is do use their data for research,
+or to use it in a way that could potentially interest them, not only it
+could save you the trouble of writing a web scraper, but it could also
+help clarify straight away what you can and cannot do with the data.</p>
+<p>On the other hand, when you are publishing your own data, as part of
+a research project, documentation or a public website, you might want to
+think about whether someone might be interested in getting your data for
+their own project. If you can, try to provide others with a way to
+download your raw data in a structured format, and thus save them the
+trouble to try and scrape your own pages!</p>
+</section><section id="web-scraping-code-of-conduct"><h2 class="section-heading">Web scraping code of conduct<a class="anchor" aria-label="anchor" href="#web-scraping-code-of-conduct"></a>
+</h2>
+<hr class="half-width">
+<p>This all being said, if you adhere to the following simple rules, you
+will probably be fine.</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Ask nicely.</strong> If your project requires data from a
+particular organisation, for example, you can try asking them directly
+if they could provide you what you are looking for. With some luck, they
+will have the primary data that they used on their website in a
+structured format, saving you the trouble.</li>
+<li>
+<strong>Don’t download copies of documents that are clearly not
+public.</strong> For example, academic journal publishers often have
+very strict rules about what you can and what you cannot do with their
+databases. Mass downloading article PDFs is probably prohibited and can
+put you (or at the very least your friendly university librarian) in
+trouble. If your project requires local copies of documents (e.g. for
+text mining projects), special agreements can be reached with the
+publisher. The library is a good place to start investigating something
+like that.</li>
+<li>
+<strong>Check your local legislation.</strong> For example, certain
+countries have laws protecting personal information such as email
+addresses and phone numbers. Scraping such information, even from
+publicly avaialable web sites, can be illegal (e.g. in Australia).</li>
+<li>
+<strong>Don’t share downloaded content illegally.</strong> Scraping
+for personal purposes is usually OK, even if it is copyrighted
+information, as it could fall under the fair use provision of the
+intellectual property legislation. However, sharing data for which you
+don’t hold the right to share is illegal.</li>
+<li>
+<strong>Share what you can.</strong> If the data you scraped is in
+the public domain or you got permission to share it, then put it out
+there for other people to reuse it (e.g. on <a href="https://datahub.io" class="external-link">datahub.io</a>). If you wrote a web scraper to
+access it, share its code (e.g. on GitHub) so that others can benefit
+from it.</li>
+<li>
+<strong>Don’t break the Internet.</strong> Not all web sites are
+designed to withstand thousands of requests per second. If you are
+writing a recursive scraper (i.e. that follows hyperlinks), test it on a
+smaller dataset first to make sure it does what it is supposed to do.
+Adjust the settings of your scraper to allow for a delay between
+requests. By default, Scrapy uses conservative settings that should
+minimize this risk.</li>
+<li>
+<strong>Publish your own data in a reusable way.</strong> Don’t
+force others to write their own scrapers to get at your data. Use open
+and software-agnostic formats (e.g. JSON, XML), provide metadata (data
+about your data: where it came from, what it represents, how to use it,
+etc.) and make sure it can be indexed by search engines so that people
+can find it.</li>
+</ol></section><section id="going-further"><h2 class="section-heading">Going further<a class="anchor" aria-label="anchor" href="#going-further"></a>
+</h2>
+<hr class="half-width">
+<p>This lesson only provides an introduction to the practice of web
+scraping and highlights one of the tools available.</p>
+<p>Happy scraping!</p>
+</section><div class="section level1">
+<h1 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h1>
+<ul>
+<li>The <a href="https://en.wikipedia.org/wiki/Web_scraping" class="external-link">Web
+scraping Wikipedia page</a> has a concise definition of many concepts
+discussed here.</li>
+<li>The <a href="http://schoolofdata.org/handbook/courses/scraping/" class="external-link">School of Data
+Handbook</a> has a short introduction to web scraping, with links to
+resources e.g. for data journalists.</li>
+<li>
+<a href="https://blog.rubyroidlabs.com/2016/04/web-scraping-1/" class="external-link">This
+blog</a> has a discussion on some of the legal aspects of web
+scraping.</li>
+<li>
+<a href="https://morph.io/" class="external-link">morph.io</a> is a cloud-based web
+scraping platform that supports multiple frameworks, interacts with
+GitHub and provides a built-in way to save and share extracted
+data.</li>
+<li>
+<a href="https://software-carpentry.org/" class="external-link">Software Carpentry</a> is
+a non-profit organisation that runs learn-to-code workshops worldwide.
+All lessons are publicly available and can be followed indepentently.
+This lesson is heavily inspired by Software Carpentry.</li>
+<li>
+<a href="http://www.datacarpentry.org/" class="external-link">Data Carpentry</a> is a
+sister organisation of Software Carpentry focused on the fundamental
+data management skills required to conduct research.</li>
+<li>
+<a href="https://librarycarpentry.github.io/" class="external-link">Library Carpentry</a>
+is another Software Carpentry spinoff focused on software skills for
+librarians.</li>
+</ul>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>Web scraping is, in general, legal and won’t get you into
+trouble.</li>
+<li>There are a few things to be careful about, notably don’t overwhelm
+a web server and don’t steal content.</li>
+<li>Be nice. In doubt, ask.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</div></section>
 </div>
     </main>
 </div>
@@ -445,12 +1616,12 @@ any links that you are not going to use.
 				<p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
         
-        <a href="https://github.com/carpentries/workbench-template-rmd/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/bkmgit/webscraping-r/edit/main/README.md" class="external-link">Edit on GitHub</a>
         
 	
-        | <a href="https://github.com/carpentries/workbench-template-rmd/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a> 
-        | <a href="https://github.com/carpentries/workbench-template-rmd/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/carpentries/workbench-template-rmd/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="https://github.com/bkmgit/webscraping-r/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a> 
+        | <a href="https://github.com/bkmgit/webscraping-r/" class="external-link">Source</a></p>
+				<p><a href="https://github.com/bkmgit/webscraping-r/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:https://github.com/bkmgit/webscraping-r/issues" class="external-link">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
         
@@ -472,14 +1643,14 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "TrainingMaterial",
-  "@id": "https://carpentries.github.io/workbench-template-rmd/instructor/aio.html",
+  "@id": "https://bkmgit.github.io/webscraping-r/instructor/aio.html",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "R, automation, data collection",
   "name": "All in One View",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-rmd/instructor/aio.html",
-  "identifier": "https://carpentries.github.io/workbench-template-rmd/instructor/aio.html",
+  "url": "https://bkmgit.github.io/webscraping-r/instructor/aio.html",
+  "identifier": "https://bkmgit.github.io/webscraping-r/instructor/aio.html",
   "dateCreated": "2023-06-10",
   "dateModified": "2023-06-10",
   "datePublished": "2023-06-10"
