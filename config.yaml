@@ -60,11 +60,10 @@ contact: 'https://github.com/bkmgit/webscraping-r/issues' # FIXME
 # Order of episodes in your lesson
 episodes: 
 - 00-before-we-start.Rmd
-- 01-intro.Rmd
-- 02-html.Rmd
+- 01-a-webpage.Rmd
+- 02-intro.Rmd
 - 03-scraping.Rmd
-- 04-plotting.Rmd
-- 05-conclusion.Rmd
+- 04-conclusion.Rmd
 
 # Information for Learners
 learners: 
