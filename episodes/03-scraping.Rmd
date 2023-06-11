@@ -1,113 +1,145 @@
 ---
-title: "Using RMarkdown"
-teaching: 10
-exercises: 2
+title: "Web scraping using R and rvest"
+teaching: 45
+exercises: 0
+source: Rmd
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- How can scraping a web site be automated?
+- How can I setup a scraping project using R and rvest?
+- How do I tell rvest what elements to scrape from a webpage?
+- What to do with the data extracted with rvest?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Setting up an rvest project.
+- Understanding the various elements of an rvest project.
+- Scrape a website and extract specific elements.
+- Plot scraped data.
+- Store the extracted data.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.txt) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+The `rvest` package allows us to scrape data from a website. We
+will obtain the list of Brazilian senators and plot the number
+of senators each political party has.
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
-
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 1: Can you do it?
-
-What is the output of this command?
+## Setup the environment
 
 ```r
-paste("This", "new", "lesson", "looks", "good")
+library(rvest)
+library(httr)
+library(ggplot2)
+library(stringr)
 ```
 
-:::::::::::::::::::::::: solution 
+The additional libraries are 
+- `httr` for controling downloads
+- `ggplot2` plotting the data
+- `stringr` string manipulations to process the data
 
-## Output
- 
-```output
-[1] "This new lesson looks good"
+## Get the website
+
+```r
+BR_sen_html <- read_html(
+  GET("https://www25.senado.leg.br/web/senadores/em-exercicio",
+  timeout(600)))
+# Check type of document
+class(BR_sen_html)
+# Examine the first few lines of the document
+BR_sen_html
 ```
 
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can also include figures generated from R Markdown:
-
-```{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"}
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
-  border = FALSE
-)
+Now, check the type of document and examine the first few lines:
+```r
+class(BR_sen_html)
+BR_sen_html
 ```
 
-Or you can use standard markdown for static figures with the following syntax:
+## Extract the data
 
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
+Examining the source html page, all names are in
+a table with the id `id="senadoresemexercicio-tabela-senadores"`
+Let us extract this table:
 
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+```r
+BR_sen_df <- BR_sen_html %>%
+  html_element("#senadoresemexercicio-tabela-senadores") %>%
+  html_table()
+```
 
-## Math
+Let us view the first few rows
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+``r
+head(BR_sen_df)
+```
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+## Clean the data
 
-Cool, right?
+Each region has three senators, but the table also
+contains lines with redundant information for the region
+Since we want to analyze the data, we want to remove
+these lines. We also want to substitute state
+name abbreviations by the full names.  We first create
+a dataframe with the names and abbreviations, and
+then create a vector we can use to substitute abbreviations
+for full names:
+
+```r
+BR_sen_regions_df <- as.data.frame(str_split_fixed(BR_sen_df$UF, " - ", 2))
+BR_sen_regions_df <- BR_sen_regions_df[c(seq(1,108,4)),]
+bbr_replacements <- as.character(BR_sen_regions_df$V2)
+names(abbr_replacements) <- BR_sen_regions_df$V1
+```
+
+We now remove the extra rows from the data frame:
+
+```r
+BR_sen_df <- BR_sen_df[!grepl(' - ',BR_sen_df$Nome),]
+```
+
+and then replace the abbreviations
+
+```r
+BR_sen_df$UF <- str_replace_all(BR_sen_df$UF,abbr_replacements)
+```
+
+## Plot a portion of the data
+
+With the clean data, we can plot the number of senators each party has,
+
+```r
+g <- ggplot(BR_sen_df,aes(y=Partido))
+g + geom_bar()
+```
+
+## Save the data
+
+Finally, we can save the data in a csv file:
+
+```r
+write.csv(BR_sen_df,file="BrazilianSenateMembers.csv")
+```
+
+## References
+
+* [Hadley Wickham "Web scraping 101"](https://rvest.tidyverse.org/articles/rvest.html)
+* [yusuzech "Web Scarping Cheat Sheet"](https://github.com/yusuzech/r-web-scraping-cheat-sheet)
+* [Antoine Soetewey and Pietro Zanotta "Web scraping in R"](https://statsandr.com/blog/web-scraping-in-r/)
+* [Petr Bouchal "Crawling through a web labyrinth using {rvest}"](https://petrbouchal.xyz/post/rvest-time/)
+* [Oxylabs "Web Scraping With R"](https://github.com/oxylabs/web-scraping-r)
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- rvest is an R package that can be use to scrape content from the web.
+- With rvest, we can define what elements to scrape from a page.
+- By using R to scrape the data, analysis can also be done on the scraped data.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-[r-markdown]: https://rmarkdown.rstudio.com/
