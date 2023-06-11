@@ -4,6 +4,9 @@
     <loc>https://bkmgit.github.io/webscraping-r/00-before-we-start.html</loc>
   </url>
   <url>
+    <loc>https://bkmgit.github.io/webscraping-r/01-a-webpage.html</loc>
+  </url>
+  <url>
     <loc>https://bkmgit.github.io/webscraping-r/01-intro.html</loc>
   </url>
   <url>
@@ -13,7 +16,13 @@
     <loc>https://bkmgit.github.io/webscraping-r/02-html.html</loc>
   </url>
   <url>
+    <loc>https://bkmgit.github.io/webscraping-r/02-intro.html</loc>
+  </url>
+  <url>
     <loc>https://bkmgit.github.io/webscraping-r/03-scraping.html</loc>
+  </url>
+  <url>
+    <loc>https://bkmgit.github.io/webscraping-r/04-conclusion.html</loc>
   </url>
   <url>
     <loc>https://bkmgit.github.io/webscraping-r/04-plotting.html</loc>
@@ -43,6 +52,9 @@
     <loc>https://bkmgit.github.io/webscraping-r/instructor/00-before-we-start.html</loc>
   </url>
   <url>
+    <loc>https://bkmgit.github.io/webscraping-r/instructor/01-a-webpage.html</loc>
+  </url>
+  <url>
     <loc>https://bkmgit.github.io/webscraping-r/instructor/01-intro.html</loc>
   </url>
   <url>
@@ -52,7 +64,13 @@
     <loc>https://bkmgit.github.io/webscraping-r/instructor/02-html.html</loc>
   </url>
   <url>
+    <loc>https://bkmgit.github.io/webscraping-r/instructor/02-intro.html</loc>
+  </url>
+  <url>
     <loc>https://bkmgit.github.io/webscraping-r/instructor/03-scraping.html</loc>
+  </url>
+  <url>
+    <loc>https://bkmgit.github.io/webscraping-r/instructor/04-conclusion.html</loc>
   </url>
   <url>
     <loc>https://bkmgit.github.io/webscraping-r/instructor/04-plotting.html</loc>

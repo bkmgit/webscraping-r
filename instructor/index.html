@@ -157,7 +157,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="00-before-we-start.html">1. Using RMarkdown</a>
+        <a href="00-before-we-start.html">1. Before we Start</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -166,7 +166,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="01-intro.html">2. Introduction: What is web scraping?</a>
+        <a href="01-a-webpage.html">2. Creating a Webpage</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -175,7 +175,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="02-html.html">3. Using RMarkdown</a>
+        <a href="02-intro.html">3. Introduction: What is web scraping?</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -184,7 +184,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="03-scraping.html">4. Using RMarkdown</a>
+        <a href="03-scraping.html">4. Web scraping using R and rvest</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -193,16 +193,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="04-plotting.html">5. Using RMarkdown</a>
-    </div><!--/div.accordion-header-->
-        
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush7">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading7">
-        <a href="05-conclusion.html">6. Conclusion</a>
+        <a href="04-conclusion.html">5. Conclusion</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -253,7 +244,7 @@
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/00-before-we-start.html" rel="next">Next: Using RMarkdown... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/00-before-we-start.html" rel="next">Next: Before we Start... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Web scraping with R and rvest</h1>
       
@@ -397,7 +388,7 @@ the bottom left), then press the <kbd>Enter</kbd> (Windows and Linux) or
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="st">"tidyverse"</span>, <span class="st">"rvest"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="st">"tidyverse"</span>, <span class="st">"rvest"</span>, <span class="st">"ggplot2"</span>, <span class="st">"httr"</span>, <span class="st">"stringr"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <p>Alternatively, you can install the packages using RStudio’s graphical
 user interface by going to <code>Tools &gt; Install Packages</code> and
@@ -410,7 +401,10 @@ pasting the following code into the console:</p>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span></span>
-<span><span class="kw">library</span><span class="op">(</span><span class="va">rvest</span><span class="op">)</span></span></code></pre>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">rvest</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">httr</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">stringr</span><span class="op">)</span></span></code></pre>
 </div>
 <p>If you do not see an error like
 <code>there is no package called ‘...'</code> you are good to go!</p>
@@ -433,8 +427,9 @@ outside of the scope of this lesson.</p>
 </div>
 </section><section id="acknowledgments"><h2 class="section-heading">Acknowledgments<a class="anchor" aria-label="anchor" href="#acknowledgments"></a>
 </h2>
-<hr class="half-width"><p>This lesson draws material from the <a href="https://datacarpentry.org/R-ecology-lesson/" class="external-link">R Ecology lesson</a>
-and the <a href="https://librarycarpentry.org/lc-webscraping" class="external-link">Introduction to Web
+<hr class="half-width"><p>This lesson draws material from the <a href="https://datacarpentry.org/R-ecology-lesson/" class="external-link">R Ecology lesson</a>,
+<a href="https://datacarpentry.org/r-socialsci" class="external-link">R Social Science
+lesson</a> and the <a href="https://librarycarpentry.org/lc-webscraping" class="external-link">Introduction to Web
 Scraping lesson</a>.</p>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
@@ -445,53 +440,48 @@ any links that you are not going to use.
 <span class="visually-hidden">Duration: </span>00h 00m
 </td>
 <td>
- 1. <a href="00-before-we-start.html">Using RMarkdown</a>
+ 1. <a href="00-before-we-start.html">Before we Start</a>
 </td>
 <td>
-How do you write a lesson using R Markdown and <a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?
+How to find your way around RStudio?<br>How to interact with R?<br>How
+to manage your environment?<br>How to install packages?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 12m
+<span class="visually-hidden">Duration: </span>00h 40m
 </td>
 <td>
- 2. <a href="01-intro.html">Introduction: What is web scraping?</a>
+ 2. <a href="01-a-webpage.html">Creating a Webpage</a>
+</td>
+<td>
+How can I create a basic webpage?
+</td>
+</tr><tr><td>
+<span class="visually-hidden">Duration: </span>01h 00m
+</td>
+<td>
+ 3. <a href="02-intro.html">Introduction: What is web scraping?</a>
 </td>
 <td>
 What is web scraping and why is it useful?<br>What are typical use
 cases for web scraping?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 22m
+<span class="visually-hidden">Duration: </span>01h 25m
 </td>
 <td>
- 3. <a href="02-html.html">Using RMarkdown</a>
+ 4. <a href="03-scraping.html">Web scraping using R and rvest</a>
 </td>
 <td>
-How do you write a lesson using R Markdown and <a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?
+How can scraping a web site be automated?<br>How can I setup a scraping
+project using R and rvest?<br>How do I tell rvest what elements to
+scrape from a webpage?<br>What to do with the data extracted with
+rvest?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 34m
+<span class="visually-hidden">Duration: </span>02h 10m
 </td>
 <td>
- 4. <a href="03-scraping.html">Using RMarkdown</a>
-</td>
-<td>
-How do you write a lesson using R Markdown and <a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?
-</td>
-</tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 46m
-</td>
-<td>
- 5. <a href="04-plotting.html">Using RMarkdown</a>
-</td>
-<td>
-How do you write a lesson using R Markdown and <a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?
-</td>
-</tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 58m
-</td>
-<td>
- 6. <a href="05-conclusion.html">Conclusion</a>
+ 5. <a href="04-conclusion.html">Conclusion</a>
 </td>
 <td>
 When is web scraping OK and when is it not?<br>Is web scraping legal?
@@ -499,7 +489,7 @@ Can I get into trouble?<br>How can I make sure I’m doing the right
 thing?<br>What can I do with the data that I’ve scraped?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 13m
+<span class="visually-hidden">Duration: </span>02h 25m
 </td>
 <td>
 Finish
@@ -591,7 +581,7 @@ any links that you are not going to use.
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/00-before-we-start.html" rel="next">Next: Using RMarkdown... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/00-before-we-start.html" rel="next">Next: Before we Start... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->
@@ -636,8 +626,8 @@ any links that you are not going to use.
   "url": "https://bkmgit.github.io/webscraping-r/instructor/index.html",
   "identifier": "https://bkmgit.github.io/webscraping-r/instructor/index.html",
   "dateCreated": "2023-06-10",
-  "dateModified": "2023-06-10",
-  "datePublished": "2023-06-10"
+  "dateModified": "2023-06-11",
+  "datePublished": "2023-06-11"
 }
 
   </script><script>
