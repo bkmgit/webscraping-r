@@ -137,7 +137,7 @@ to execute the command.
 
 
 ```r
-install.packages(c("tidyverse", "rvest"))
+install.packages(c("tidyverse", "rvest", "ggplot2", "httr", "stringr"))
 ```
 
 Alternatively, you can install the packages using RStudio's graphical user
@@ -152,6 +152,9 @@ packages by pasting the following code into the console:
 ```r
 library(tidyverse)
 library(rvest)
+library(ggplot2)
+library(httr)
+library(stringr)
 ```
 
 If you do not see an error like `there is no package called ‘...'` you are good
@@ -174,5 +177,6 @@ computer. However, the details are outside of the scope of this lesson.
 
 ## Acknowledgments
 
-This lesson draws material from the [R Ecology lesson](https://datacarpentry.org/R-ecology-lesson/) and
+This lesson draws material from the [R Ecology lesson](https://datacarpentry.org/R-ecology-lesson/),
+[R Social Science lesson](https://datacarpentry.org/r-socialsci) and
 the [Introduction to Web Scraping lesson](https://librarycarpentry.org/lc-webscraping).  

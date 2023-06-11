@@ -1,7 +1,7 @@
 ---
 title: "Introduction: What is web scraping?"
 teaching: 10
-exercises: 0
+exercises: 15
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -188,6 +188,36 @@ In this lesson, we will continue exploring the examples above and try different 
 the information they contain. But before we launch into web scraping proper, we need to look
 a bit closer at how information is organized within an HTML document and how to build queries to access
 a specific subset of that information.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 1: Can you do it?
+
+Examine the website of another legislative body. Note
+down 
+- the URL with a listing of representatives if available
+- whether the listing of representatives can be downloaded in csv or other format
+
+
+:::::::::::::::::::::::: solution
+
+## Example
+
+|--                         |--                                                               |--                 |
+| Legislative body          | url                                                             | Downloadable      |
+|--                         |--                                                               |--                 |
+| Canadian House of Commons | https://www.noscommunes.ca/members/fr/election-candidates       | Yes               |
+| Kenyan National Assembly  | http://www.parliament.go.ke/index.php/the-national-assembly/mps | No                |
+| US Congress               | https://www.congress.gov/members                                | No                |
+| Russian Duma              | http://duma.gov.ru/duma/deputies/                               |                   |
+|                           | http://api.duma.gov.ru/pages/dokumentatsiya/spisok-otrasley-zakonodatelstva   | Yes |
+| India Rajya Sabha         | https://sansad.in/rs/members                                    | Yes               |
+| UK House of Commons       | https://members.parliament.uk/members/commons                   | No                |
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
